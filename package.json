@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node --env-file=.env server.js",
-    "watch": "node --watch --env-file=.env --watch index.js"
+  "start": "node --env-file=.env server.js",
+  "watch": "node --watch --env-file=.env  server.js" 
   },
   "keywords": [],
   "author": "",
