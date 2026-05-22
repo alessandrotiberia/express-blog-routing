@@ -2,10 +2,10 @@
   "name": "express-blog-routing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node --env-file=.env server.js",
-    "watch": ""
+    "watch": "node --watch --env-file=.env --watch index.js"
   },
   "keywords": [],
   "author": "",
