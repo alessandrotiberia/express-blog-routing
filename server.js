@@ -1,13 +1,11 @@
 import express, { response } from 'express';
 import { error } from 'node:console';
+import { Router } from 'express';
+//import posts from './routers/routers/posts';
 
 const app = express();
 const port = process.env.SERVER_PORT || 3000;
 
-app.get('/', (request, response) => {
-
-
-});
 
 app.listen(port, (error) => {
 
