@@ -13,10 +13,6 @@ function show(request, response) {
     //converto in number e tolgo spazi vuoti trim 
     const okId = Number(id.trim());
 
-}
-
-function create(request, response) {
-
     //Se valore di id non è numero allora conversione fallita mess errore
     if (isNaN(okId)) {
         response.status(404)
@@ -26,15 +22,22 @@ function create(request, response) {
             });
         return;
     }
-
+    // se id è negativo eseguiamo un controllo
     if (okId <= 0) {
         response.status(404)
-        .json({
-           error:"id negativo o uguale a 0",
-           results : null
-        });
-        return;
+            .json({
+                error: "id negativo o uguale a 0",
+                results: null
+            });
+        return; // sempre fuori dalla condizione per bloccare funzione
     }
+}
+
+function create(request, response) {
+    response.json({
+        results: 'creato correttamente'
+
+    });
 }
 
 
