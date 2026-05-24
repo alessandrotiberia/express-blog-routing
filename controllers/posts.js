@@ -31,6 +31,21 @@ function show(request, response) {
             });
         return; // sempre fuori dalla condizione per bloccare funzione
     }
+    
+    // cerco id dentro array posts dato dal docente un oggetto che ha stesso id
+    const idFound = id.find(posts => {
+        return idFound === okId
+    });
+
+    // controllo se non trovo id dico undefined
+    if (idFound === undefined) {
+        response.status(404)
+            .json({
+                error: 'risultato non trovato o non corrisponde',
+                results: null
+            });
+        return;
+    }
 }
 
 function create(request, response) {
