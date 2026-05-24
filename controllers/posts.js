@@ -31,7 +31,7 @@ function show(request, response) {
             });
         return; // sempre fuori dalla condizione per bloccare funzione
     }
-    
+
     // cerco id dentro array posts dato dal docente un oggetto che ha stesso id
     const idFound = id.find(posts => {
         return idFound === okId
@@ -53,14 +53,33 @@ function create(request, response) {
         results: 'creato correttamente'
 
     });
+    return;
 }
 
+function destroy(request, response) {
+    // Recupero l'id dai parametri per usarlo nel messaggio
+    const { id } = request.params;
 
+    // Restituisco solo un messaggio di conferma
+    response.json({
+        results: `Cancellazione del post ${id}`
+    });
+    return;
+}
+
+function update(request, response) {
+    response.json({
+        results: 'modificato correttamente'
+    });
+    return;
+}
 
 export {
     index,
     show,
-    create
+    create,
+    destroy,
+    update
 };
 
 
