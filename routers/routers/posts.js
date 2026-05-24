@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { index, show, create } from "../../controllers/posts";
 
 //  conterrà le rotte necessario per l'entità post.
 const router = express.Router();
@@ -11,4 +12,4 @@ router.get('/:id', show);
 router.post('/', create);
 
 
-export default posts;
+export default router;
